@@ -1,0 +1,22 @@
+.btn {
+    background-color: $color-primary;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    text-transform: uppercases;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: 0 4px 5px rgba($color: #000000, $alpha: .3);
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+
+    &:active {
+        transform: translateY(5px);
+        box-shadow: 0 2px 3px rgba($color: #000000, $alpha: .3);
+    }
+}
