@@ -7,7 +7,7 @@
   "scripts": {
     "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
     "compile:sass": "node-sass sass/main.scss css/style.css",
-    "devserver": "live-server --browser=firefox",
+    "devserver": "live-server --browser=chrome",
     "start": "npm-run-all --parallel devserver watch:sass",
     "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed",
