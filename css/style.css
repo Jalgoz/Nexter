@@ -17,7 +17,10 @@ body {
 
 .heading-1 {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1; }
 
 .heading-2 {
   font-family: "Josefin Sans", sans-serif;
@@ -93,7 +96,43 @@ body {
 
 .header {
   background-color: #54483A;
-  grid-column: full-start / col-end 6; }
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  justify-content: center; }
+  .header__btn {
+    justify-self: start;
+    align-self: start; }
+  .header__logo {
+    height: 3rem;
+    justify-self: center; }
+  .header__seenon-text {
+    font-size: 1.6rem;
+    color: #aaa;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center; }
+    .header__seenon-text::before, .header__seenon-text::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor; }
+  .header__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2.5rem;
+    justify-items: center; }
+    .header__seenon-logos img {
+      height: 2.5rem;
+      filter: brightness(70%); }
 
 .footer {
   grid-column: full-start / full-end;
@@ -267,7 +306,7 @@ body {
   background-color: #f9f7f6;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3.5rem; }
@@ -285,6 +324,7 @@ body {
       justify-self: end;
       grid-row: 1 / 2;
       grid-column: 2 / -1;
+      cursor: pointer;
       fill: #c69963;
       height: 3rem;
       width: 3rem;
@@ -320,13 +360,13 @@ body {
 .btn {
   background-color: #c69963;
   color: white;
-  border: 1px solid transparent;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
-  text-transform: uppercases;
+  text-transform: uppercase;
   padding: 1.8rem 3rem;
   cursor: pointer;
-  transition: all .2s; }
+  transition: all .2s;
+  border: none; }
   .cta:hover,
   .btn:hover {
     background-color: #B28451; }
@@ -336,7 +376,8 @@ body {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); }
   .btn:active {
     transform: translateY(5px);
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    outline: none; }
 
 .cta:active {
   text-decoration: underline; }
