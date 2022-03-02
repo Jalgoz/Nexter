@@ -207,6 +207,20 @@ body {
   text-align: center;
   width: 70%; }
 
+.link:link, .link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: currentColor;
+  text-transform: uppercase;
+  background-color: #101d2c;
+  padding: 4px;
+  transition: all .2s; }
+
+.link:hover, .link:active {
+  color: #c69963;
+  box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.4);
+  transform: rotate(-5deg) scale(1.1); }
+
 .sidebar {
   background-color: #c69963;
   grid-column: side-start / side-end;

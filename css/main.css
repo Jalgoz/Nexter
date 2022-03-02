@@ -337,6 +337,25 @@ body {
   width: 70%;
 }
 
+.link:link, .link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: currentColor;
+  text-transform: uppercase;
+  background-color: #101d2c;
+  padding: 4px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.link:hover, .link:active {
+  color: #c69963;
+  -webkit-box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.4);
+          box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.4);
+  -webkit-transform: rotate(-5deg) scale(1.1);
+          transform: rotate(-5deg) scale(1.1);
+}
+
 .sidebar {
   background-color: #c69963;
   grid-column: side-start / side-end;
