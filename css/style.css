@@ -85,8 +85,8 @@ body {
     padding: 4rem; }
 
 .homes {
-  background-color: #101d2c;
   grid-column: center-start / center-end;
+  margin: 12rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem; }
@@ -161,23 +161,80 @@ body {
   background-color: #54483A;
   grid-column: full-start / full-end; }
 
-.home {
-  background-color: #f9f7f6; }
+.card {
+  background-color: #f9f7f6;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3.5rem; }
+  .card__img {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    width: 100%;
+    z-index: 1; }
+  .card__icon {
+    fill: #c69963;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem; }
+    .card__icon--like {
+      justify-self: end;
+      grid-row: 1 / 2;
+      grid-column: 2 / -1;
+      fill: #c69963;
+      height: 3rem;
+      width: 3rem;
+      margin: 1rem;
+      z-index: 20; }
+  .card__name {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    align-self: end;
+    justify-self: center;
+    width: 80%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #101d2c;
+    color: white;
+    font-weight: 400;
+    z-index: 20;
+    transform: translateY(50%); }
+  .card__location, .card__rooms {
+    margin-top: 2.5rem; }
+  .card__location, .card__rooms, .card__area, .card__price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center; }
+  .card__btn {
+    grid-column: 1 / -1; }
 
+.cta,
 .btn {
   background-color: #c69963;
   color: white;
   border: 1px solid transparent;
-  border-radius: 5px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
   text-transform: uppercases;
   padding: 1.8rem 3rem;
   cursor: pointer;
-  transition: all .2s;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); }
+  transition: all .2s; }
+  .cta:hover,
   .btn:hover {
     background-color: #B28451; }
+
+.btn {
+  border-radius: 5px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); }
   .btn:active {
     transform: translateY(5px);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
+
+.cta:active {
+  text-decoration: underline; }
